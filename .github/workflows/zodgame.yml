@@ -10,6 +10,12 @@ on:
     branches: [ main ]
     
   workflow_dispatch:
+
+# 👇 新增的权限配置区块，用于修复 403 报错
+permissions:
+  actions: write
+  contents: read
+
 jobs:
   build:
     runs-on: windows-latest
